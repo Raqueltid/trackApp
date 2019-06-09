@@ -1,0 +1,154 @@
+/* FLEX
+============================================= */
+
+.flex {
+  display: flex;
+  &.flex-row {
+      flex-direction: row;
+  }
+  &.flex-row-reverse {
+      flex-direction: row-reverse;
+  }
+  &.flex-column {
+      flex-direction: column;
+  }
+  &.flex-column-reverse {
+      flex-direction: column-reverse;
+  }
+}
+
+.flex-column {
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.flex-row {
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.flex-row-reverse {
+  -ms-flex-direction: row-reverse !important;
+  flex-direction: row-reverse !important
+}
+
+.flex-column-reverse {
+  -ms-flex-direction: column-reverse !important;
+  flex-direction: column-reverse !important
+}
+
+.flex-wrap {
+  -ms-flex-wrap: wrap !important;
+  flex-wrap: wrap !important
+}
+
+.flex-nowrap {
+  -ms-flex-wrap: nowrap !important;
+  flex-wrap: nowrap !important
+}
+
+.flex-wrap-reverse {
+  -ms-flex-wrap: wrap-reverse !important;
+  flex-wrap: wrap-reverse !important
+}
+
+//align-items
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-baseline {
+  align-items: baseline;
+}
+
+.align-items-stretch {
+  align-items: stretch;
+}
+
+//justify-content
+.justify-content-start {
+  justify-content: flex-start;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+//align-self
+.align-self-auto {
+  align-self: auto;
+}
+
+.align-self-start {
+  align-self: flex-start;
+}
+
+.align-self-end {
+  align-self: flex-end;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.align-self-baseline {
+  align-self: baseline;
+}
+
+.align-self-stretch {
+  align-self: stretch;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+
+
+$margin: 8;
+.flex-float {
+  margin: #{$margin}px;
+}
+
+$cols: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+
+@each $size in $cols {
+.flex-#{$size}
+{
+    width: 100%;
+}
+}
+
+@media (min-width:970px) {
+  @each $size in $cols {
+      $numOfCols: 12 / $size;
+      $percent: $size * 100 / 12;
+      .flex-#{$size} {
+          width: calc(#{$percent}% - #{$numOfCols * $margin}px);
+      }
+  }
+}

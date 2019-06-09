@@ -1,0 +1,10 @@
+<app-loading *ngIf="isLoading"></app-loading>
+<div
+    *ngFor="let geo of geoList; index as i; even as isEven"
+    class="row d-flex align-items-center list-stripped row-movement"
+    id="row-geo-{{ geo.getId() }}">
+    <div class="col-12">
+       {{geo.getId()}}
+       {{geo.getDate()}}
+    </div>
+</div>

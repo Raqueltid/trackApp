@@ -1,0 +1,250 @@
+/* BASE - Base Variable file along with starting point Mixins and Placeholders.
+========================================================================== */
+
+@import 'variables';
+@import 'mixins';
+html {
+    scroll-behavior: smooth;
+}
+
+*,
+ ::after,
+ ::before {
+    box-sizing: border-box;
+}
+
+//Wrap-content
+#wrap-content {
+    @include container(1440px, auto, $white, 20px);
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+}
+
+// Scroll
+::-webkit-scrollbar {
+    display: block;
+    width: 16px;
+    z-index: 999999;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: $white;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background-color: $black;
+    border: 4px solid $white;
+    height: 80px;
+}
+
+// Selection
+::selection {
+    background: $text-color;
+    color: $white;
+}
+
+::-moz-selection {
+    background: $text-color;
+    color: $white;
+}
+
+::-webkit-selection {
+    background: $text-color;
+    color: $white;
+}
+
+// Body
+body {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    letter-spacing: 0px;
+    color: $text-color;
+    font-size: 16px;
+    line-height: 28px;
+    font-family: $font-roboto-regular;
+    margin: 0px;
+    width: 100%;
+}
+
+#wrap-content {
+    padding-top: 100px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-oswald;
+    @include two-mseconds-transition;
+}
+
+.text-muted {
+    color: $disabled-color;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.clearfix {
+    &:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+a {
+    color: $text-color;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+div {
+    box-sizing: border-box;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+button {
+    &.close {
+        padding: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-appearance: inherit;
+        font-size: $font-size-24;
+        line-height: auto;
+        padding: 0px;
+        &:hover,
+        &:focus {
+            background-color: transparent;
+        }
+    }
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto
+}
+
+@media (min-width:576px) {
+    .container {
+        max-width: 540px
+    }
+}
+
+@media (min-width:768px) {
+    .container {
+        max-width: 720px
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        max-width: 960px
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        max-width: 1140px
+    }
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto
+}
+
+.d-none {
+    display: none !important
+}
+
+.d-inline {
+    display: inline !important
+}
+
+.d-inline-block {
+    display: inline-block !important
+}
+
+.d-block {
+    display: block !important
+}
+
+.d-table {
+    display: table !important
+}
+
+.d-table-row {
+    display: table-row !important
+}
+
+.d-table-cell {
+    display: table-cell !important
+}
+
+.d-flex {
+    display: -ms-flexbox !important;
+    display: flex !important
+}
+
+.d-inline-flex {
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important
+}
+
+.ngb-dp-month {
+  margin: 0 auto;
+  outline: none;
+}
+
+.ngb-dp-day {
+  &:focus {
+      outline: none;
+  }
+}
+
+.ngb-dp-navigation-chevron{
+  border-width: .1em .1em 0 0 !important;
+}
+
+.btn-light.bg-primary.text-white, .custom-day.range, .custom-day:hover {
+  background: $primary-color;
+  border-radius: 100%;
+  color: $white;
+}
+
+.custom-select {
+  margin: 0 10px;
+}

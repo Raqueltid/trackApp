@@ -1,0 +1,89 @@
+
+@import '../../../styles/estilet/variables';
+@import '../../../styles/estilet/mixins';
+
+
+/* NAVBAR
+============================================= */
+
+.navbar {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  background: $grey;
+  width: 100%;
+  .navbar__brand {
+      display: inline-block;
+      padding-top: .3125rem;
+      padding-bottom: .3125rem;
+      margin-right: 1rem;
+      font-size: $font-size-24;
+      line-height: 40px;
+      white-space: nowrap;
+  }
+  .navbar__collapse {
+      flex-basis: 100%;
+      flex-grow: 1;
+      align-items: center;
+      justify-content: space-between;
+      .navbar__nav {
+          display: flex;
+          flex-direction: row wrap;
+          padding-left: 0;
+          margin: 0;
+          list-style: none;
+          align-items: center;
+          .nav-item {
+            cursor: pointer;
+              .nav-link {
+                  display: flex;
+                  align-items: center;
+                  color: $text-color;
+                  &.close {
+                      &:hover {
+                          color: $red;
+                      }
+                  }
+                  span {
+                      &.fa {
+                          font-size: $font-size-28;
+                          font-weight: 800;
+                          margin-right: 6px;
+                      }
+                      &.nav-link__text {
+                          display: none;
+                      }
+                  }
+                  &:hover {
+                      color: $primary-color;
+                  }
+              }
+          }
+      }
+  }
+}
+
+@media (min-width:769px) {
+  .navbar {
+      .navbar__collapse {
+          .navbar__nav {
+              .nav-item {
+                  .nav-link {
+                      span {
+                          &.fa {
+                              font-size: $font-size-20;
+                          }
+                          &.nav-link__text {
+                              display: block;
+                          }
+                      }
+                  }
+              }
+          }
+      }
+  }
+}

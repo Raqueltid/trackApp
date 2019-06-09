@@ -1,0 +1,48 @@
+
+@import 'variables';
+
+/* Listas 
+============================================= */
+
+
+ul{
+	padding: 0px;
+	li{
+		list-style: none;
+	}
+}
+
+.list{
+	li{
+		padding-left: 20px;
+		position: relative;
+
+		&:before{
+			content: "";
+			display: block;
+			width: 10px;
+			height: 1px;
+			background: $text-color;
+			position: absolute;
+			top: 14px;
+			left: 0;
+		}
+	}
+	&.square{
+		li{
+			&:before{
+				height: 10px;
+				top: 8px;
+			}
+		}
+	}
+	&.circle{
+		li{
+			&:before{
+				height: 10px;
+				top: 8px;
+				border-radius: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,52 @@
+/* TABLES
+============================================= */
+
+@mixin ellipsisstyles {
+    max-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 15px;
+    border-collapse: collapse;
+    thead {
+        th {
+            text-align: left;
+            line-height: 15px;
+            padding: 5px 10px;
+            text-transform: uppercase;
+            font-size: $font-size-12;
+            letter-spacing: 1px;
+            color: $black;
+            border-bottom: 1px solid $grey2;
+            @include ellipsisstyles;
+            &.table-check {
+                width: 41px;
+            }
+        }
+    }
+    tbody {
+        tr {
+            background: $white;
+            &:nth-child(odd) {
+                background: $grey;
+            }
+            &:last-child {
+                td {
+                    border-bottom: 1px solid $grey;
+                }
+            }
+            td {
+                padding: 10px;
+                text-align: left;
+                font-size: $font-size-14;
+                border-top: 1px solid $grey;
+                @include ellipsisstyles;
+            }
+        }
+    }
+}

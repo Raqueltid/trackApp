@@ -1,0 +1,284 @@
+
+/* FONTS
+============================================= */
+
+@font-face {
+    font-family: "Roboto-Thin";
+    src: url("assets/fonts/Roboto-Thin.eot"),
+    url("assets/fonts/Roboto-Thin.woff") format("woff"),
+    url("assets/fonts/Roboto-Thin.ttf") format("truetype"),
+    url("assets/fonts/Roboto-Thin.svg#Roboto") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("assets/fonts/Roboto-Regular.eot"),
+    url("assets/fonts/Roboto-Regular.woff") format("woff"),
+    url("assets/fonts/Roboto-Regular.ttf") format("truetype"),
+    url("assets/fonts/Roboto-Regular.svg#Roboto") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url("assets/fonts/Roboto-Medium.eot"),
+    url("assets/fonts/Roboto-Medium.woff") format("woff"),
+    url("assets/fonts/Roboto-Medium.ttf") format("truetype"),
+    url("assets/fonts/Roboto-Medium.svg#Roboto") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Oswald-Regular";
+    src: url("assets/fonts/Oswald-Regular.eot"),
+    url("assets/fonts/Oswald-Regular.woff") format("woff"),
+    url("assets/fonts/Oswald-Regular.ttf") format("truetype"),
+    url("assets/fonts/Oswald-Regular.svg#Roboto") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quantion-font';
+  src:  url('assets/fonts/Quantion-font.eot?y58gib');
+  src:  url('assets/fonts/Quantion-font.eot?y58gib#iefix') format('embedded-opentype'),
+    url('assets/fonts/Quantion-font.ttf?y58gib') format('truetype'),
+    url('assets/fonts/Quantion-font.woff?y58gib') format('woff'),
+    url('assets/fonts/Quantion-font.svg?y58gib#Quantion-font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="fa-"], [class*=" fa-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Quantion-font' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-end:before {
+  content: "\e946";
+}
+.fa-crono:before {
+  content: "\e90f";
+}
+.fa-meal:before {
+  content: "\e93a";
+}
+.fa-clock:before {
+  content: "\e900";
+}
+.fa-quantion:before {
+  content: "\e902";
+}
+.fa-media:before {
+  content: "\e945";
+}
+.fa-camera:before {
+  content: "\e942";
+}
+.fa-help:before {
+  content: "\e943";
+}
+.fa-home:before {
+  content: "\e944";
+}
+.fa-alert:before {
+  content: "\e940";
+}
+.fa-logout:before {
+  content: "\e941";
+}
+.fa-add:before {
+  content: "\e901";
+}
+.fa-archive:before {
+  content: "\e903";
+}
+.fa-arrow-bottom:before {
+  content: "\e904";
+}
+.fa-arrow-left:before {
+  content: "\e905";
+}
+.fa-arrow-right:before {
+  content: "\e906";
+}
+.fa-arrow-top:before {
+  content: "\e907";
+}
+.fa-arrows:before {
+  content: "\e908";
+}
+.fa-at:before {
+  content: "\e909";
+}
+.fa-back:before {
+  content: "\e90a";
+}
+.fa-brush:before {
+  content: "\e90b";
+}
+.fa-calendar:before {
+  content: "\e90c";
+}
+.fa-call:before {
+  content: "\e90d";
+}
+.fa-catch:before {
+  content: "\e90e";
+}
+.fa-chat:before {
+  content: "\e910";
+}
+.fa-check:before {
+  content: "\e911";
+}
+.fa-close:before {
+  content: "\e912";
+}
+.fa-config:before {
+  content: "\e913";
+}
+.fa-cursor:before {
+  content: "\e914";
+}
+.fa-dollar:before {
+  content: "\e915";
+}
+.fa-dots:before {
+  content: "\e916";
+}
+.fa-download-archive:before {
+  content: "\e917";
+}
+.fa-download:before {
+  content: "\e918";
+}
+.fa-duplicate:before {
+  content: "\e919";
+}
+.fa-edit-in:before {
+  content: "\e91a";
+}
+.fa-edit:before {
+  content: "\e91b";
+}
+.fa-error:before {
+  content: "\e91c";
+}
+.fa-euro:before {
+  content: "\e91d";
+}
+.fa-export:before {
+  content: "\e91e";
+}
+.fa-facture:before {
+  content: "\e91f";
+}
+.fa-filter:before {
+  content: "\e920";
+}
+.fa-grids:before {
+  content: "\e921";
+}
+.fa-info:before {
+  content: "\e922";
+}
+.fa-line-menu:before {
+  content: "\e923";
+}
+.fa-loading:before {
+  content: "\e924";
+}
+.fa-lock:before {
+  content: "\e925";
+}
+.fa-map:before {
+  content: "\e926";
+}
+.fa-menu:before {
+  content: "\e927";
+}
+.fa-net:before {
+  content: "\e928";
+}
+.fa-none:before {
+  content: "\e929";
+}
+.fa-notify:before {
+  content: "\e92a";
+}
+.fa-pdf:before {
+  content: "\e92b";
+}
+.fa-percent:before {
+  content: "\e92c";
+}
+.fa-picture:before {
+  content: "\e92d";
+}
+.fa-plus:before {
+  content: "\e92e";
+}
+.fa-point-menu:before {
+  content: "\e92f";
+}
+.fa-pound:before {
+  content: "\e930";
+}
+.fa-question:before {
+  content: "\e931";
+}
+.fa-rating:before {
+  content: "\e932";
+}
+.fa-redo:before {
+  content: "\e933";
+}
+.fa-register:before {
+  content: "\e934";
+}
+.fa-reload:before {
+  content: "\e935";
+}
+.fa-save:before {
+  content: "\e936";
+}
+.fa-search:before {
+  content: "\e937";
+}
+.fa-send:before {
+  content: "\e938";
+}
+.fa-tools:before {
+  content: "\e939";
+}
+.fa-ubication:before {
+  content: "\e93b";
+}
+.fa-undo:before {
+  content: "\e93c";
+}
+.fa-user:before {
+  content: "\e93d";
+}
+.fa-view:before {
+  content: "\e93e";
+}
+.fa-zoom:before {
+  content: "\e93f";
+}
+

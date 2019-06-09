@@ -1,0 +1,23 @@
+
+@import 'variables';
+@import 'mixins';
+
+
+/* NAVS
+============================================= */
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.nav-link {
+    display: block;
+    &.disabled{
+        color: $disabled-color !important;
+        cursor: default;
+    }
+}

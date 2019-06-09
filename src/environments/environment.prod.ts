@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  restBackendUrl: 'http://pruebagcloud-230801.appspot.com/'
 };

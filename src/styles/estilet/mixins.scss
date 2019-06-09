@@ -1,0 +1,109 @@
+
+/* MIXINS
+============================================= */
+
+// Wrap
+@mixin container($wrap-ancho, $wrap-alto, $wrap-background, $wrap-padding){
+	max-width: $wrap-ancho;
+	height: $wrap-alto;
+	background-color: $wrap-background;
+	padding: $wrap-padding;
+}
+
+// Clearfix
+@mixin clearfix{
+	&:after {
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+}
+
+// Center objects
+@mixin center-absolute{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	&.x{
+		transform: translate(0%, -50%);
+	}
+	&.y{
+		transform: translate(-50%, 0%);
+	}
+}
+
+// Center images
+@mixin center-image{
+	position: absolute;
+	left: -10000%;
+	right: -10000%;
+	top: -10000%;
+	bottom: -10000%;
+	margin: auto auto;
+	min-width: 1000%;
+	min-height: 1000%;
+	transform: scale(0.1);
+}
+
+// Shadow
+@mixin shadow{
+	-webkit-box-shadow: 0px 0px 18px 0px rgba(3,108,237,1);
+  -moz-box-shadow: 0px 0px 18px 0px rgba(3,108,237,1);
+  box-shadow: 0px 0px 18px 0px rgba(3,108,237,1);
+}
+
+// Time anim
+@mixin two-mseconds-transition{
+	transition: all 0.2s ease-in-out;
+	transition-timing-function: cubic-bezier(.21, .16, .19, 1.04);
+}
+@mixin tree-mseconds-transition{
+	transition: all 0.3s ease-in-out;
+	transition-timing-function: cubic-bezier(.21, .16, .19, 1.04);
+}
+@mixin five-mseconds-transition{
+	transition: all 0.5s ease-in-out;
+	transition-timing-function: cubic-bezier(.21, .16, .19, 1.04);
+}
+@mixin eight-mseconds-transition{
+	transition: all 0.8s ease-in-out;
+	transition-timing-function: cubic-bezier(.21, .16, .19, 1.04);
+}
+@mixin one-second-transition{
+	transition: all 1s ease-in-out;
+	transition-timing-function: cubic-bezier(.21, .16, .19, 1.04);
+}
+@mixin two-seconds-transition{
+	transition: all 2s ease-in-out;
+	transition-timing-function: cubic-bezier(.21, .16, .19, 1.04);
+}
+
+// Img responsive
+@mixin img-responsive{
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+// Align
+@mixin center{
+	text-align: center;
+}
+@mixin left{
+	text-align: left;
+}
+@mixin right{
+	text-align: right;
+}
+
+// Full width
+@mixin full-width{
+	width: 100%;
+	box-sizing: border-box;
+}
+
+
